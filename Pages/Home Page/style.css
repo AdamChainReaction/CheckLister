@@ -1,5 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@keyframes Entrance {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes SlideLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes SlideRight {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes Shake {
+	0% {
+		transform: translate(0);
+	}
+
+	20% {
+		transform: translate(-2px, 2px);
+	}
+
+	40% {
+		transform: translate(-2px, -2px);
+	}
+
+	60% {
+		transform: translate(2px, 2px);
+	}
+
+	80% {
+		transform: translate(2px, -2px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+.titleAnimate{
+    animation: Entrance 1s linear 0s 1 normal none;
+    -webkit-animation: Entrance 1s linear 0s 1 normal none;
+}
+
+.lineAnimateRight{
+    animation: SlideRight 2s linear 0s 1 normal forwards;
+}
+
+.lineAnimateLeft{
+    animation: SlideLeft 2s linear 0s 1 normal forwards;
+}
+
 body{
     font-family: "Kanit", sans-serif;
     background: linear-gradient(0deg, #fb14ff 0%, #6600ff 100%);
@@ -11,18 +86,10 @@ body{
     align-items: center;
 }
 
-#overline{
-    text-decoration: underline;
-}
-
 #title{
     font-size: 100px;
     font-weight: bolder;
     letter-spacing: 50px;
-}
-
-#underline{
-    text-decoration: overline;
 }
 
 img{
@@ -66,4 +133,5 @@ img{
 
 #button:hover{
     background-color: #fb14ff;
+    animation: Shake 1s linear 0s 1 normal forwards;
 }

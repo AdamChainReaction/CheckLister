@@ -13,11 +13,9 @@ img{
 }
 
 #head{
-    background: rgba(252,176,69,1);
     padding: 0.5%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    align-items: start;
 }
 
 #nav-logo{
@@ -36,12 +34,7 @@ img{
 .nav-li{
     text-decoration: none;
     font-size: x-large;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+    color: azure;
 }
 
 .scrollSpace{
@@ -49,7 +42,7 @@ img{
 }
 
 article{
-    margin-top: 20%;
+    margin-top: 10%;
 }
 
 #container{
@@ -60,7 +53,7 @@ article{
 }
 
 #container-title{
-    margin-bottom: 2.5%;
+    margin-bottom: 0%;
 }
 
 .item {
@@ -100,7 +93,7 @@ article{
     -moz-appearance: none;
     width: 20px;
     height: 20px;
-    margin-left: 10px;
+    margin-left: 30px;
     border: 2px solid #ccc;
     border-radius: 3px;
     cursor: pointer;
@@ -109,6 +102,10 @@ article{
 .item input[type="checkbox"]:checked {
     background-color: greenyellow;
     border-color: greenyellow;
+}
+
+.actContainer{
+    display: flex;
 }
 
 #addButton {
@@ -123,6 +120,7 @@ article{
     margin-bottom: 20px;
     cursor: pointer;
     border-radius: 5px;
+    margin-top: 2.5%;
     margin-bottom: 2.5%;
 }
 

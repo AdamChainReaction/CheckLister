@@ -5,6 +5,7 @@ function createElement(text) {
   const itemText = document.createTextNode(text);
   const removeButton = document.createElement('button');
   const toggleCheckbox = document.createElement('input');
+  const actionContainer = document.createElement("div");
 
 
   removeButton.textContent = 'X';
@@ -22,10 +23,11 @@ function createElement(text) {
     }
   });
 
-
+  actionContainer.appendChild(removeButton);
+  actionContainer.appendChild(toggleCheckbox);
   newItem.appendChild(itemText);
-  newItem.appendChild(removeButton);
-  newItem.appendChild(toggleCheckbox);
+  newItem.appendChild(actionContainer);
+  actionContainer.classList.add("actContainer");
   newItem.classList.add('item');
 
   return newItem;
